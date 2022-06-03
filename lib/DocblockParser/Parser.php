@@ -125,10 +125,13 @@ final class Parser
     {
         $tag = $this->tokens->chomp(Token::T_TAG);
         $type = $variable = null;
+        if ($this->tokens->ifNextIs(Token::T_VARIABLE)) {
+            $variable = $this->parseVariable();
+        }
         if ($this->ifType()) {
             $type = $this->parseTypes();
         }
-        if ($this->tokens->ifNextIs(Token::T_VARIABLE)) {
+        if (!$variable && $this->tokens->ifNextIs(Token::T_VARIABLE)) {
             $variable = $this->parseVariable();
         }
 
