@@ -68,6 +68,7 @@ class TolerantDocumentSymbolProvider implements DocumentSymbolProvider
                 ),
                 null,
                 null,
+                null,
                 $this->buildNodes($this->memberNodes($node), $source)
             );
         }
@@ -86,6 +87,7 @@ class TolerantDocumentSymbolProvider implements DocumentSymbolProvider
                 ),
                 null,
                 null,
+                null,
                 $this->buildNodes($this->memberNodes($node), $source)
             );
         }
@@ -102,6 +104,7 @@ class TolerantDocumentSymbolProvider implements DocumentSymbolProvider
                     PositionConverter::intByteOffsetToPosition($node->name->getStartPosition(), $source),
                     PositionConverter::intByteOffsetToPosition($node->name->getEndPosition(), $source)
                 ),
+                null,
                 null,
                 null,
                 $this->buildNodes($this->memberNodes($node), $source)
@@ -123,6 +126,7 @@ class TolerantDocumentSymbolProvider implements DocumentSymbolProvider
                 ),
                 null,
                 null,
+                null,
                 $this->buildNodes($this->memberNodes($node), $source)
             );
         }
@@ -140,6 +144,7 @@ class TolerantDocumentSymbolProvider implements DocumentSymbolProvider
                     PositionConverter::intByteOffsetToPosition($node->name->getStartPosition(), $source),
                     PositionConverter::intByteOffsetToPosition($node->name->getEndPosition(), $source)
                 ),
+                null,
                 null,
                 null,
                 []
@@ -161,6 +166,7 @@ class TolerantDocumentSymbolProvider implements DocumentSymbolProvider
                     ),
                     null,
                     null,
+                    null,
                     []
                 );
             }
@@ -178,6 +184,7 @@ class TolerantDocumentSymbolProvider implements DocumentSymbolProvider
                     PositionConverter::intByteOffsetToPosition($node->name->getStartPosition(), $source),
                     PositionConverter::intByteOffsetToPosition($node->name->getEndPosition(), $source)
                 ),
+                null,
                 null,
                 null,
                 []
